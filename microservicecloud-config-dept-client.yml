@@ -22,24 +22,28 @@ spring:
       max-total: 5
       max-wait-millis: 200 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: cn.bdqn.springcloud.entity
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml
+  config-location: classpath:mybatis/mybatis.cfg.xml #mybatis配置文件
+  type-aliases-package: cn.bdqn.springcloud.entity #所有entity路径
+  mapper-locations: classpath:mybatis/mapper/**/*.xml #mapper映射文件
  
  
-eureka: 
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml #mybatis配置文件
+  type-aliases-package: cn.bdqn.springcloud.entity #所有entity路径
+  mapper-locations: classpath:mybatis/mapper/**/*.xml #mapper映射文件
+ 
+
+eureka:
   client: #客户端注册进eureka服务列表内
-    service-url: 
-      defaultZone: http://eureka7001.com:7001/eureka
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: dept-8001.com
-    prefer-ip-address: true
- 
+    instance-id: microservice-dept_8001
+    prefer-ip-address: true #访问路径可以显示id地址
  
 info:
-  app.name: atguigu-microservicecloud-springcloudconfig01
-  company.name: www.atguigu.com
+  app.name: bdqn-microservice-cloud
+  company.name: www.bdqn.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 ---
@@ -63,23 +67,21 @@ spring:
   
   
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: cn.bdqn.springcloud.entity
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml
+  config-location: classpath:mybatis/mybatis.cfg.xml #mybatis配置文件
+  type-aliases-package: cn.bdqn.springcloud.entity #所有entity路径
+  mapper-locations: classpath:mybatis/mapper/**/*.xml #mapper映射文件
  
- 
-eureka: 
+
+eureka:
   client: #客户端注册进eureka服务列表内
-    service-url: 
-      defaultZone: http://eureka7001.com:7001/eureka
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: dept-8001.com
-    prefer-ip-address: true
- 
+    instance-id: microservice-dept_8001
+    prefer-ip-address: true #访问路径可以显示id地址
  
 info:
-  app.name: atguigu-microservicecloud-springcloudconfig02
-  company.name: www.atguigu.com
+  app.name: bdqn-microservice-cloud
+  company.name: www.bdqn.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
